@@ -1,0 +1,32 @@
+name: gpn_functional
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+  - pyg
+dependencies:
+  - pip
+  - pytorch_scatter
+  - pytorch
+  - pytorch_sparse
+  - sacred
+  - filelock
+  - numpy
+  - pandas
+  - ogb
+  - tinydb
+  - matplotlib
+  - pyro-ppl
+  - plotly
+  - scikit-learn
+  - seaborn
+  - networkx
+  - tensorflow
+  - tqdm
+  - scipy
+  - pip:
+      - pyblaze
+      - gpflow
+      - torch-geometric
+      - torch-sparse
+      - tinydb-serialization
