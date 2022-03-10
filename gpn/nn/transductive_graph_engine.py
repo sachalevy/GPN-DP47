@@ -120,7 +120,6 @@ class TransductiveGraphEngine(Engine):
                 )
             except CallbackException as e:
                 exception = e
-                print(e)
                 break
 
             # 2.2) Train
@@ -304,7 +303,6 @@ class TransductiveGraphEngine(Engine):
         assert split_prefix in (None, "ood", "id")
 
         y_hat = self.predict_batch(data)
-        print(y_hat)
         evals = {}
         for s in self.splits:
             if s == "all":
@@ -400,7 +398,6 @@ class TransductiveGraphEngine(Engine):
 
         # setup
         num_predictions = len(data)
-        print("num predictions", num_predictions)
         self._exec_callbacks(
             callbacks, "before_predictions", self.model, num_predictions
         )
