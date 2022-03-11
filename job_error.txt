@@ -1,0 +1,21 @@
+[=== Module python/3.7 loaded ===]
+Traceback (most recent call last):
+  File "train_and_eval.py", line 12, in <module>
+    from gpn.utils import RunConfiguration, DataConfiguration
+  File "/home/mila/l/levysach/GPN-DP47/gpn/__init__.py", line 1, in <module>
+    from . import data
+  File "/home/mila/l/levysach/GPN-DP47/gpn/data/__init__.py", line 1, in <module>
+    from .dataset_manager import DatasetManager
+  File "/home/mila/l/levysach/GPN-DP47/gpn/data/dataset_manager.py", line 3, in <module>
+    import torch_geometric.datasets as D
+  File "/home/mila/l/levysach/dp47/lib/python3.7/site-packages/torch_geometric/__init__.py", line 4, in <module>
+    import torch_geometric.data
+  File "/home/mila/l/levysach/dp47/lib/python3.7/site-packages/torch_geometric/data/__init__.py", line 1, in <module>
+    from .data import Data
+  File "/home/mila/l/levysach/dp47/lib/python3.7/site-packages/torch_geometric/data/data.py", line 3, in <module>
+    from torch_geometric.typing import OptTensor, NodeType, EdgeType
+  File "/home/mila/l/levysach/dp47/lib/python3.7/site-packages/torch_geometric/typing.py", line 4, in <module>
+    from torch_sparse import SparseTensor
+  File "/home/mila/l/levysach/dp47/lib/python3.7/site-packages/torch_sparse/__init__.py", line 16, in <module>
+    f'{library}_{suffix}', [osp.dirname(__file__)]).origin)
+AttributeError: 'NoneType' object has no attribute 'origin'
