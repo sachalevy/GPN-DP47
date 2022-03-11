@@ -1,6 +1,7 @@
 import os
 from typing import OrderedDict
-os.environ['MKL_THREADING_LAYER'] = 'GNU'
+
+os.environ["MKL_THREADING_LAYER"] = "GNU"
 
 import logging
 import torch
@@ -19,7 +20,7 @@ ex = Experiment()
 
 @ex.config
 def config():
-    #pylint: disable=missing-function-docstring
+    # pylint: disable=missing-function-docstring
     overwrite = None
     db_collection = None
 
@@ -46,31 +47,30 @@ def run_experiment(run: dict, data: dict, model: dict, training: dict) -> dict:
     if torch.cuda.device_count() <= 0:
         run_cfg.set_values(gpu=False)
 
-    logging.info('Received the following configuration:')
-    logging.info('RUN')
+    logging.info("Received the following configuration:")
+    logging.info("RUN")
     logging.info(run_cfg.to_dict())
-    logging.info('-----------------------------------------')
-    logging.info('DATA')
+    logging.info("-----------------------------------------")
+    logging.info("DATA")
     logging.info(data_cfg.to_dict())
-    logging.info('-----------------------------------------')
-    logging.info('MODEL')
+    logging.info("-----------------------------------------")
+    logging.info("MODEL")
     logging.info(model_cfg.to_dict())
-    logging.info('-----------------------------------------')
-    logging.info('TRAINING')
+    logging.info("-----------------------------------------")
+    logging.info("TRAINING")
     logging.info(train_cfg.to_dict())
-    logging.info('-----------------------------------------')
+    logging.info("-----------------------------------------")
 
     experiment = MultipleRunExperiment(run_cfg, data_cfg, model_cfg, train_cfg, ex=ex)
-    
+
     results = experiment.run()
 
+    metrics = [m[4:] for m in results.keys() if m.startswith("val_")]
+    result_values = {"val": [], "test": []}
 
-    metrics = [m[4:] for m in results.keys() if m.startswith('val_')]
-    result_values = {'val': [], 'test': []}
-    
-    for s in ('val', 'test'):
+    for s in ("val", "test"):
         for m in metrics:
-            key = f'{s}_{m}'
+            key = f"{s}_{m}"
             if key in results:
                 val = results[key]
                 if isinstance(val, list):
