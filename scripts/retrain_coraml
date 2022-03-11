@@ -7,4 +7,5 @@
 #SBATCH --mem=100Gb
 
 module load python/3.7
+source $HOME/dp47/bin/activate
 python3 train_and_eval.py with configs/gpn/new_classification_gpn_16.yaml data.dataset=CoraML
