@@ -18,7 +18,4 @@ setuptools==58.0.4
 tensorflow==2.8.0
 tinydb==4.6.1
 tinydb_serialization==2.1.0
-torch_geometric
-torch_scatter
-torch_sparse
 tqdm==4.62.3

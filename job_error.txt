@@ -1,0 +1,63 @@
+[=== Module python/3.7 loaded ===]
+[=== Module cudatoolkit/10.2 loaded ===]
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+pyblaze 2.3.2 requires scikit-learn<0.25.0,>=0.23.0, but you'll have scikit-learn 1.0.2 which is incompatible.
+WARNING: You are using pip version 20.2.2; however, version 22.0.4 is available.
+You should consider upgrading via the '/home/mila/l/levysach/dp47/bin/python -m pip install --upgrade pip' command.
+slurmstepd: error: *** JOB 1574697 ON rtx1 CANCELLED AT 2022-03-11T19:30:03 ***
+[=== Module python/3.7 loaded ===]
+[=== Module cudatoolkit/11.1 loaded ===]
+[=== Module cuda/11.1/cudnn/8.0 loaded ===]
+[=== Module cudatoolkit/11.1 loaded ===]
+[=== Module cuda/11.1/nccl/2.10 loaded ===]
+[=== Module openmpi/4.0.4 loaded ===]
+[=== Module pytorch/1.8.1 loaded ===]
+WARNING: You are using pip version 20.2.2; however, version 22.0.4 is available.
+You should consider upgrading via the '/home/mila/l/levysach/dp47/bin/python -m pip install --upgrade pip' command.
+Traceback (most recent call last):
+  File "train_and_eval.py", line 8, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+[=== Module python/3.7 loaded ===]
+[=== Module openmpi/4.0.4 loaded ===]
+[=== Module pytorch/1.8.1 loaded ===]
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+markdown 3.3.6 requires importlib-metadata>=4.4; python_version < "3.10", but you'll have importlib-metadata 1.5.0 which is incompatible.
+pyblaze 2.3.2 requires scikit-learn<0.25.0,>=0.23.0, but you'll have scikit-learn 1.0.2 which is incompatible.
+pyro-ppl 1.8.0 requires torch>=1.9.0, but you'll have torch 1.8.1+cu111 which is incompatible.
+WARNING: You are using pip version 20.2.2; however, version 22.0.4 is available.
+You should consider upgrading via the '/home/mila/l/levysach/rdp47/bin/python -m pip install --upgrade pip' command.
+Traceback (most recent call last):
+  File "train_and_eval.py", line 13, in <module>
+    from gpn.utils import RunConfiguration, DataConfiguration
+  File "/home/mila/l/levysach/GPN-DP47/gpn/__init__.py", line 1, in <module>
+    from . import data
+  File "/home/mila/l/levysach/GPN-DP47/gpn/data/__init__.py", line 1, in <module>
+    from .dataset_manager import DatasetManager
+  File "/home/mila/l/levysach/GPN-DP47/gpn/data/dataset_manager.py", line 3, in <module>
+    import torch_geometric
+  File "/home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_geometric/__init__.py", line 4, in <module>
+    import torch_geometric.data
+  File "/home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_geometric/data/__init__.py", line 1, in <module>
+    from .data import Data
+  File "/home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_geometric/data/data.py", line 3, in <module>
+    from torch_geometric.typing import OptTensor, NodeType, EdgeType
+  File "/home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_geometric/typing.py", line 4, in <module>
+    from torch_sparse import SparseTensor
+  File "/home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_sparse/__init__.py", line 40, in <module>
+    from .storage import SparseStorage  # noqa
+  File "/home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_sparse/storage.py", line 5, in <module>
+    from torch_scatter import segment_csr, scatter_add
+  File "/home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_scatter/__init__.py", line 16, in <module>
+    torch.ops.load_library(spec.origin)
+  File "/cvmfs/ai.mila.quebec/apps/x86_64/debian/pytorch/python3.7-cuda11.1-cudnn8.0-v1.8.1/lib/python3.7/site-packages/torch/_ops.py", line 104, in load_library
+    ctypes.CDLL(path)
+  File "/cvmfs/ai.mila.quebec/apps/x86_64/debian/python/3.7/lib/python3.7/ctypes/__init__.py", line 364, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /home/mila/l/levysach/rdp47/lib/python3.7/site-packages/torch_scatter/_version_cpu.so: undefined symbol: _ZN3c106detail23torchInternalAssertFailEPKcS2_jS2_S2_
