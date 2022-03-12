@@ -92,6 +92,7 @@ def DatasetManager(
         "PubMed",
         "CiteSeer",
         "ogbn-arxiv",
+        "ogbn-mag",
     }
 
     default_transform = T.Compose(
@@ -188,6 +189,16 @@ def DatasetManager(
         transform = T.Compose([ToUndirected()])
         data = ogbn.PygNodePropPredDataset(
             name="ogbn-arxiv", root="./data", transform=transform
+        )
+        data = get_idx_split_arxiv(data)
+        data.data.y = data.data.y.squeeze()
+        return data
+
+    elif dataset == "ogbn-mag":
+        assert split == "public"
+        transform = T.Compose([ToUndirected()])
+        data = ogbn.PygNodePropPredDataset(
+            name="ogbn-mag", root="./data", transform=transform
         )
         data = get_idx_split_arxiv(data)
         data.data.y = data.data.y.squeeze()
