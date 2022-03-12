@@ -157,7 +157,6 @@ class TransductiveExperiment:
 
     def evaluate(self) -> Dict[str, Any]:
         metrics = unn.get_metrics(self.metrics)
-        print("simple metrics", metrics)
         eval_res = self.engine.evaluate(
             data=self.dataset.val_loader, metrics=metrics, gpu=self.run_cfg.gpu
         )

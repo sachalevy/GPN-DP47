@@ -52,7 +52,7 @@ model:
 training:
   epochs: 100000
   stopping_mode: default
-  stopping_patience: 50
+  stopping_patience: 200
   stopping_restore_best: true
   stopping_metric: val_CE
   stopping_minimize: true
