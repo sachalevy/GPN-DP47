@@ -19,3 +19,4 @@ tensorflow==2.8.0
 tinydb==4.6.1
 tinydb_serialization==2.1.0
 tqdm==4.62.3
+PyYAML
