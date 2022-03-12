@@ -220,7 +220,9 @@ class TransductiveExperiment:
 
         # move training datasets to gpu before training
         gpu = self.engine._gpu_descriptor(self.run_cfg.gpu)
+        print(f"Found a GPU: {gpu}")
         device = gpu_device(gpu[0] if isinstance(gpu, list) else gpu)
+        print(f"Training on device {device}")
 
         # @sacha: perform memory mapping prior to training (load variables to gpu)
         self.dataset.train_dataset.to(device)
