@@ -22,3 +22,4 @@ torch_geometric
 torch_scatter
 torch_sparse
 tqdm==4.62.3
+PyYAML
