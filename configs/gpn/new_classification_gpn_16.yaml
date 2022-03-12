@@ -7,7 +7,7 @@ run:
   # if you don't want to run experiments on a GPU, set this flag to false
   gpu: 0 # or false
 
-  experiment_name: custom
+  experiment_name: custom2
 
 data:
   # change this to get a different random split with any (split_no > 0)
