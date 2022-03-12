@@ -46,6 +46,7 @@ def run_experiment(run: dict, data: dict, model: dict, training: dict) -> dict:
 
     if torch.cuda.device_count() <= 0:
         run_cfg.set_values(gpu=False)
+    print(f"Seeing {torch.cuda.device_count()} GPUs")
 
     logging.info("Received the following configuration:")
     logging.info("RUN")
