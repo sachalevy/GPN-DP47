@@ -1,0 +1,54 @@
+2.0.4
+Seeing 1 GPUs
+Found a GPU: 0
+Training on device cuda:0
+Epoch 1/5:
+[2K [                              ] (0.0%) ETA n/a [Elapsed 0:00:00 | 0.00 it/s][2K [==============================] (100.0%) ETA 0:00:00 [Elapsed 0:15:16 | 0.00 it/s][2K [Elapsed 0:30:38 | 0.00 it/s] REG: 2351.33423, UCE: 646008.50000, train_CE: 5.92115, train_ECE: 0.32175, train_accuracy: 0.01484, train_average_entropy: 2.12908, train_avg_prediction_confidence_aleatoric: 0.33660, train_avg_prediction_confidence_epistemic: 1349.92529, train_avg_sample_confidence_aleatoric: 0.33660, train_avg_sample_confidence_epistemic: 4005.71729, train_avg_sample_confidence_features: 4593.25684, train_avg_sample_confidence_neighborhood: nan, train_brier_score: 1.05978, train_confidence_aleatoric_apr: 0.02406, train_confidence_aleatoric_auroc: 0.65074, train_confidence_epistemic_apr: 0.01103, train_confidence_epistemic_auroc: 0.38229, train_confidence_structure_apr: nan, train_confidence_structure_auroc: nan, val_CE: 6.07970, val_ECE: 0.31531, val_accuracy: 0.01967, val_average_entropy: 2.13732, val_avg_prediction_confidence_aleatoric: 0.33497, val_avg_prediction_confidence_epistemic: 1183.74646, val_avg_sample_confidence_aleatoric: 0.33497, val_avg_sample_confidence_epistemic: 3530.02637, val_avg_sample_confidence_features: 4562.68945, val_avg_sample_confidence_neighborhood: nan, val_brier_score: 1.06261, val_confidence_aleatoric_apr: 0.03770, val_confidence_aleatoric_auroc: 0.67291, val_confidence_epistemic_apr: 0.01547, val_confidence_epistemic_auroc: 0.40759, val_confidence_structure_apr: nan, val_confidence_structure_auroc: nan
+Epoch 2/5:
+[2K [                              ] (0.0%) ETA n/a [Elapsed 0:00:00 | 0.00 it/s][2K [==============================] (100.0%) ETA 0:00:00 [Elapsed 0:15:14 | 0.00 it/s][2K [Elapsed 0:30:48 | 0.00 it/s] REG: 2078.05688, UCE: 551049.62500, train_CE: 5.29750, train_ECE: 0.10912, train_accuracy: 0.04533, train_average_entropy: 2.64704, train_avg_prediction_confidence_aleatoric: 0.15444, train_avg_prediction_confidence_epistemic: 457.57825, train_avg_sample_confidence_aleatoric: 0.15444, train_avg_sample_confidence_epistemic: 2958.89502, train_avg_sample_confidence_features: 3390.60205, train_avg_sample_confidence_neighborhood: nan, train_brier_score: 1.01277, train_confidence_aleatoric_apr: 0.15398, train_confidence_aleatoric_auroc: 0.81500, train_confidence_epistemic_apr: 0.04662, train_confidence_epistemic_auroc: 0.52968, train_confidence_structure_apr: nan, train_confidence_structure_auroc: nan, val_CE: 5.48720, val_ECE: 0.12141, val_accuracy: 0.03198, val_average_entropy: 2.65328, val_avg_prediction_confidence_aleatoric: 0.15339, val_avg_prediction_confidence_epistemic: 401.69022, val_avg_sample_confidence_aleatoric: 0.15339, val_avg_sample_confidence_epistemic: 2614.72754, val_avg_sample_confidence_features: 3378.45093, val_avg_sample_confidence_neighborhood: nan, val_brier_score: 1.01952, val_confidence_aleatoric_apr: 0.14379, val_confidence_aleatoric_auroc: 0.85707, val_confidence_epistemic_apr: 0.03931, val_confidence_epistemic_auroc: 0.58659, val_confidence_structure_apr: nan, val_confidence_structure_auroc: nan
+Epoch 3/5:
+[2K [                              ] (0.0%) ETA n/a [Elapsed 0:00:00 | 0.00 it/s][2K [==============================] (100.0%) ETA 0:00:00 [Elapsed 0:15:46 | 0.00 it/s][2K [Elapsed 0:31:34 | 0.00 it/s] REG: 1893.06030, UCE: 491969.43750, train_CE: 4.84006, train_ECE: 0.07921, train_accuracy: 0.05999, train_average_entropy: 2.78461, train_avg_prediction_confidence_aleatoric: 0.13920, train_avg_prediction_confidence_epistemic: 324.12173, train_avg_sample_confidence_aleatoric: 0.13920, train_avg_sample_confidence_epistemic: 2325.17065, train_avg_sample_confidence_features: 2662.76343, train_avg_sample_confidence_neighborhood: nan, train_brier_score: 1.00462, train_confidence_aleatoric_apr: 0.05370, train_confidence_aleatoric_auroc: 0.48796, train_confidence_epistemic_apr: 0.06091, train_confidence_epistemic_auroc: 0.51887, train_confidence_structure_apr: nan, train_confidence_structure_auroc: nan, val_CE: 4.91765, val_ECE: 0.09597, val_accuracy: 0.04269, val_average_entropy: 2.78915, val_avg_prediction_confidence_aleatoric: 0.13866, val_avg_prediction_confidence_epistemic: 285.99271, val_avg_sample_confidence_aleatoric: 0.13866, val_avg_sample_confidence_epistemic: 2059.04272, val_avg_sample_confidence_features: 2658.86914, val_avg_sample_confidence_neighborhood: nan, val_brier_score: 1.01387, val_confidence_aleatoric_apr: 0.04354, val_confidence_aleatoric_auroc: 0.53852, val_confidence_epistemic_apr: 0.04068, val_confidence_epistemic_auroc: 0.49017, val_confidence_structure_apr: nan, val_confidence_structure_auroc: nan
+Epoch 4/5:
+[2K [                              ] (0.0%) ETA n/a [Elapsed 0:00:00 | 0.00 it/s][2K [==============================] (100.0%) ETA 0:00:00 [Elapsed 0:15:51 | 0.00 it/s][2K [Elapsed 0:31:40 | 0.00 it/s] REG: 1768.70081, UCE: 447638.18750, train_CE: 4.45124, train_ECE: 0.17174, train_accuracy: 0.05698, train_average_entropy: 2.86578, train_avg_prediction_confidence_aleatoric: 0.22872, train_avg_prediction_confidence_epistemic: 419.09976, train_avg_sample_confidence_aleatoric: 0.22872, train_avg_sample_confidence_epistemic: 1826.76050, train_avg_sample_confidence_features: 2090.52710, train_avg_sample_confidence_neighborhood: nan, train_brier_score: 1.00799, train_confidence_aleatoric_apr: 0.05751, train_confidence_aleatoric_auroc: 0.54957, train_confidence_epistemic_apr: 0.05638, train_confidence_epistemic_auroc: 0.50214, train_confidence_structure_apr: nan, train_confidence_structure_auroc: nan, val_CE: 4.29747, val_ECE: 0.18761, val_accuracy: 0.04134, val_average_entropy: 2.86969, val_avg_prediction_confidence_aleatoric: 0.22896, val_avg_prediction_confidence_epistemic: 371.96017, val_avg_sample_confidence_aleatoric: 0.22896, val_avg_sample_confidence_epistemic: 1619.71265, val_avg_sample_confidence_features: 2089.15112, val_avg_sample_confidence_neighborhood: nan, val_brier_score: 1.01528, val_confidence_aleatoric_apr: 0.04616, val_confidence_aleatoric_auroc: 0.58351, val_confidence_epistemic_apr: 0.03833, val_confidence_epistemic_auroc: 0.47639, val_confidence_structure_apr: nan, val_confidence_structure_auroc: nan
+Epoch 5/5:
+[2K [                              ] (0.0%) ETA n/a [Elapsed 0:00:00 | 0.00 it/s][2K [==============================] (100.0%) ETA 0:00:00 [Elapsed 0:15:43 | 0.00 it/s]
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Sat Mar 12 22:26:49 2022
+Driver Version                            : 460.106.00
+CUDA Version                              : 11.2
+
+Attached GPUs                             : 1
+GPU 00000000:27:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 114004
+            GPU Utilization               : 33 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 42605 MiB
+            Time                          : 0 ms
+            Is Running                    : 1
+
+Sat Mar 12 22:26:49 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.106.00   Driver Version: 460.106.00   CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Quadro RTX 8000     On   | 00000000:27:00.0 Off |                  Off |
+| 35%   44C    P2    66W / 260W |  42606MiB / 48601MiB |     34%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A    114004      C   python3                         42603MiB |
++-----------------------------------------------------------------------------+

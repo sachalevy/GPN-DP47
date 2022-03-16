@@ -1,0 +1,822 @@
+[=== Module python/3.7 loaded ===]
+[=== Module cudatoolkit/10.2 loaded ===]
+[=== Module cuda/10.2/cudnn/7.6 loaded ===]
+[=== Module cudatoolkit/10.2 loaded ===]
+WARNING:root:The OGB package is out of date. Your version is 1.3.2, while the latest version is 1.3.3.
+2022-03-12 22:43:48.614268: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cvmfs/ai.mila.quebec/apps/x86_64/common/cuda/10.2/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib
+2022-03-12 22:43:48.614746: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING:root:Added new config entry: "data.dataset"
+WARNING:root:Added new config entry: "data.ood_flag"
+WARNING:root:Added new config entry: "data.root"
+WARNING:root:Added new config entry: "data.split"
+WARNING:root:Added new config entry: "data.split_no"
+WARNING:root:Added new config entry: "data.test_samples_per_class"
+WARNING:root:Added new config entry: "data.train_samples_per_class"
+WARNING:root:Added new config entry: "data.val_samples_per_class"
+WARNING:root:Added new config entry: "model.dim_hidden"
+WARNING:root:Added new config entry: "model.dropout_prob"
+WARNING:root:Added new config entry: "model.dropout_prob_adj"
+WARNING:root:Added new config entry: "model.ensemble_max_init_no"
+WARNING:root:Added new config entry: "model.ensemble_min_init_no"
+WARNING:root:Added new config entry: "model.init_no"
+WARNING:root:Added new config entry: "model.model_name"
+WARNING:root:Added new config entry: "model.seed"
+WARNING:root:Added new config entry: "run.eval_mode"
+WARNING:root:Added new config entry: "run.experiment_directory"
+WARNING:root:Added new config entry: "run.experiment_name"
+WARNING:root:Added new config entry: "run.gpu"
+WARNING:root:Added new config entry: "run.job"
+WARNING:root:Added new config entry: "run.save_model"
+WARNING:root:Added new config entry: "training.epochs"
+WARNING:root:Added new config entry: "training.lr"
+WARNING:root:Added new config entry: "training.stopping_metric"
+WARNING:root:Added new config entry: "training.stopping_minimize"
+WARNING:root:Added new config entry: "training.stopping_mode"
+WARNING:root:Added new config entry: "training.stopping_patience"
+WARNING:root:Added new config entry: "training.stopping_restore_best"
+WARNING:root:Added new config entry: "training.weight_decay"
+WARNING:train_and_eval:No observers have been added to this run
+ERROR:train_and_eval:Failed after 0:00:00!
+Traceback (most recent calls WITHOUT Sacred internals):
+  File "train_and_eval.py", line 67, in run_experiment
+    results = experiment.run()
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/multiple_run_experiment.py", line 50, in run
+    results = self.run_transductive_experiment()
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/multiple_run_experiment.py", line 77, in run_transductive_experiment
+    self.model_cfg.clone(), self.train_cfg.clone(), ex=self.ex)
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/transductive_experiment.py", line 98, in __init__
+    self.dataset = ExperimentDataset(data_cfg, to_sparse=data_cfg.to_sparse)
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/dataset.py", line 58, in __init__
+    dataset = DatasetManager(**data_cfg.to_dict())
+  File "/home/mila/l/levysach/GPN-DP47/gpn/data/dataset_manager.py", line 188, in DatasetManager
+    assert split == "public"
+AssertionError
+
+[=== Module python/3.7 loaded ===]
+[=== Module cudatoolkit/10.2 loaded ===]
+[=== Module cuda/10.2/cudnn/7.6 loaded ===]
+[=== Module cudatoolkit/10.2 loaded ===]
+WARNING:root:The OGB package is out of date. Your version is 1.3.2, while the latest version is 1.3.3.
+2022-03-12 22:45:16.916837: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cvmfs/ai.mila.quebec/apps/x86_64/common/cuda/10.2/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib
+2022-03-12 22:45:16.917590: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING:root:Added new config entry: "data.dataset"
+WARNING:root:Added new config entry: "data.ood_flag"
+WARNING:root:Added new config entry: "data.root"
+WARNING:root:Added new config entry: "data.split"
+WARNING:root:Added new config entry: "data.split_no"
+WARNING:root:Added new config entry: "data.test_samples_per_class"
+WARNING:root:Added new config entry: "data.train_samples_per_class"
+WARNING:root:Added new config entry: "data.val_samples_per_class"
+WARNING:root:Added new config entry: "model.dim_hidden"
+WARNING:root:Added new config entry: "model.dropout_prob"
+WARNING:root:Added new config entry: "model.dropout_prob_adj"
+WARNING:root:Added new config entry: "model.ensemble_max_init_no"
+WARNING:root:Added new config entry: "model.ensemble_min_init_no"
+WARNING:root:Added new config entry: "model.init_no"
+WARNING:root:Added new config entry: "model.model_name"
+WARNING:root:Added new config entry: "model.seed"
+WARNING:root:Added new config entry: "run.eval_mode"
+WARNING:root:Added new config entry: "run.experiment_directory"
+WARNING:root:Added new config entry: "run.experiment_name"
+WARNING:root:Added new config entry: "run.gpu"
+WARNING:root:Added new config entry: "run.job"
+WARNING:root:Added new config entry: "run.save_model"
+WARNING:root:Added new config entry: "training.epochs"
+WARNING:root:Added new config entry: "training.lr"
+WARNING:root:Added new config entry: "training.stopping_metric"
+WARNING:root:Added new config entry: "training.stopping_minimize"
+WARNING:root:Added new config entry: "training.stopping_mode"
+WARNING:root:Added new config entry: "training.stopping_patience"
+WARNING:root:Added new config entry: "training.stopping_restore_best"
+WARNING:root:Added new config entry: "training.weight_decay"
+WARNING:train_and_eval:No observers have been added to this run
+ERROR:train_and_eval:Failed after 0:00:01!
+Traceback (most recent calls WITHOUT Sacred internals):
+  File "/home/mila/l/levysach/GPN-DP47/gpn/utils/storage.py", line 168, in retrieve_model_dir_path
+    document = documents[0]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent calls WITHOUT Sacred internals):
+  File "train_and_eval.py", line 67, in run_experiment
+    results = experiment.run()
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/multiple_run_experiment.py", line 50, in run
+    results = self.run_transductive_experiment()
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/multiple_run_experiment.py", line 77, in run_transductive_experiment
+    self.model_cfg.clone(), self.train_cfg.clone(), ex=self.ex)
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/transductive_experiment.py", line 102, in __init__
+    self.setup_model()
+  File "/home/mila/l/levysach/GPN-DP47/gpn/experiments/transductive_experiment.py", line 125, in setup_model
+    model.load_from_storage()
+  File "/home/mila/l/levysach/GPN-DP47/gpn/models/ensemble.py", line 72, in load_from_storage
+    path = self.storage.retrieve_model_dir_path(self.params.model_name, self.storage_params)
+  File "/home/mila/l/levysach/GPN-DP47/gpn/utils/storage.py", line 173, in retrieve_model_dir_path
+    match_condition={match_condition}''')
+gpn.utils.storage.ModelNotFoundError: No matching model found with (artficat_type=GCN,
+                match_condition={'model_name': 'GCN', 'seed': 42, 'num_classes': 7, 'dim_features': 2879, 'dim_hidden': 64, 'dropout_prob': 0.8, 'dropout_prob_adj': 0.0, 'to_sparse': False, 'split_no': 1, 'dataset': 'CoraML', 'root': './data', 'split': 'random', 'train_samples_per_class': 0.05, 'val_samples_per_class': 0.15, 'test_samples_per_class': 0.8, 'ood_flag': False, 'lr': 0.01, 'weight_decay': 0.0001, 'epochs': 100000, 'stopping_mode': 'default', 'stopping_patience': 50, 'stopping_restore_best': True, 'stopping_metric': 'val_CE', 'stopping_minimize': True}
+
+[=== Module python/3.7 loaded ===]
+[=== Module cudatoolkit/10.2 loaded ===]
+[=== Module cuda/10.2/cudnn/7.6 loaded ===]
+[=== Module cudatoolkit/10.2 loaded ===]
+WARNING:root:The OGB package is out of date. Your version is 1.3.2, while the latest version is 1.3.3.
+2022-03-12 22:51:24.419718: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cvmfs/ai.mila.quebec/apps/x86_64/common/cuda/10.2/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib
+2022-03-12 22:51:24.420399: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING:root:Added new config entry: "data.dataset"
+WARNING:root:Added new config entry: "data.ood_flag"
+WARNING:root:Added new config entry: "data.root"
+WARNING:root:Added new config entry: "data.split"
+WARNING:root:Added new config entry: "data.split_no"
+WARNING:root:Added new config entry: "data.test_samples_per_class"
+WARNING:root:Added new config entry: "data.train_samples_per_class"
+WARNING:root:Added new config entry: "data.val_samples_per_class"
+WARNING:root:Added new config entry: "model.dim_hidden"
+WARNING:root:Added new config entry: "model.dropout_prob"
+WARNING:root:Added new config entry: "model.dropout_prob_adj"
+WARNING:root:Added new config entry: "model.init_no"
+WARNING:root:Added new config entry: "model.model_name"
+WARNING:root:Added new config entry: "model.seed"
+WARNING:root:Added new config entry: "run.eval_mode"
+WARNING:root:Added new config entry: "run.experiment_directory"
+WARNING:root:Added new config entry: "run.experiment_name"
+WARNING:root:Added new config entry: "run.gpu"
+WARNING:root:Added new config entry: "run.job"
+WARNING:root:Added new config entry: "run.save_model"
+WARNING:root:Added new config entry: "training.epochs"
+WARNING:root:Added new config entry: "training.lr"
+WARNING:root:Added new config entry: "training.stopping_metric"
+WARNING:root:Added new config entry: "training.stopping_minimize"
+WARNING:root:Added new config entry: "training.stopping_mode"
+WARNING:root:Added new config entry: "training.stopping_patience"
+WARNING:root:Added new config entry: "training.stopping_restore_best"
+WARNING:root:Added new config entry: "training.weight_decay"
+WARNING:train_and_eval:No observers have been added to this run
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)
+/home/mila/l/levysach/live/lib/python3.7/site-packages/sklearn/metrics/_ranking.py:943: UndefinedMetricWarning: No negative samples in y_true, false positive value should be meaningless
+  UndefinedMetricWarning)

@@ -3,8 +3,6 @@
 [=== Module cuda/10.2/cudnn/7.6 loaded ===]
 [=== Module cudatoolkit/10.2 loaded ===]
 WARNING:root:The OGB package is out of date. Your version is 1.3.2, while the latest version is 1.3.3.
-2022-03-12 17:46:18.965151: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cvmfs/ai.mila.quebec/apps/x86_64/common/cuda/10.2/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib64:/cvmfs/ai.mila.quebec/apps/x86_64/common/cudnn/10.2-v7.6/lib
-2022-03-12 17:46:18.965803: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
 WARNING:root:Added new config entry: "data.dataset"
 WARNING:root:Added new config entry: "data.ood_flag"
 WARNING:root:Added new config entry: "data.root"
@@ -28,7 +26,6 @@ WARNING:root:Added new config entry: "model.init_no"
 WARNING:root:Added new config entry: "model.loss_reduction"
 WARNING:root:Added new config entry: "model.maf_layers"
 WARNING:root:Added new config entry: "model.model_name"
-WARNING:root:Added new config entry: "model.num_layers"
 WARNING:root:Added new config entry: "model.pre_train_mode"
 WARNING:root:Added new config entry: "model.radial_layers"
 WARNING:root:Added new config entry: "model.seed"
@@ -50,5 +47,4 @@ WARNING:root:Added new config entry: "training.stopping_restore_best"
 WARNING:root:Added new config entry: "training.warmup_epochs"
 WARNING:root:Added new config entry: "training.weight_decay"
 WARNING:train_and_eval:No observers have been added to this run
-/home/mila/l/levysach/GPN-DP47/gpn/nn/loss.py:55: UserWarning: Specified kernel cache directory could not be created! This disables kernel caching. Specified directory is /home/mila/l/levysach/.cache/torch/kernels. This warning will appear only once per process. (Triggered internally at  ../aten/src/ATen/native/cuda/jit_utils.cpp:860.)
-  uce = a_sum.digamma() - a_true.digamma()
+slurmstepd: error: *** JOB 1579821 ON cn-c040 CANCELLED AT 2022-03-12T22:26:49 ***
